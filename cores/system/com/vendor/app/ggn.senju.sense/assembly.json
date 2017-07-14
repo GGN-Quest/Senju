@@ -1,0 +1,236 @@
+{
+
+
+	"namespace" : [
+
+		"System"
+
+		, "Plugins"
+
+		, "String"
+
+		, "File"
+
+		, "Dir"
+
+		, "Junctions"
+
+	]
+
+	, "accessibility" : 3
+
+	, "autonomous" : true
+
+	, "handler" : {
+
+		"name" : "dpo"
+
+		, "args" : [
+
+			"theme://ggn.shodai"
+
+		]
+		
+	}
+
+	, "session" : {
+
+		"user" : true
+
+		, "app" : true
+
+	}
+	
+	, "settings" : {
+
+		"context.menu" : true
+
+		, "responsive" : true
+
+		, "fullscreen" : false
+
+	}
+
+	, "popstate" : {
+
+		"boot" : "index"
+
+		, "prefix" : "page."
+
+		, "ext" : ".php"
+
+	}
+
+	, "framework" : {
+
+		"js-version" : "nightly.0.1"
+
+		, "css-version" : "senju.nightly.0.1"
+
+	}
+
+	, "packages" : {
+
+		"js" : [
+
+			"ggn.sense"
+
+			, "ggn.prisma"
+
+			, "ggn.key.shot"
+
+			, "ggn.gabarit.nav.tab"
+
+		]
+
+		, "css" : [
+
+			"ggn.effects"
+
+			, "ggn.prisma"
+			
+			, "ggn.sense"
+
+			, "ggn.gabarit.nav.tab"
+
+		]
+
+	}
+
+	, "ressources" : {
+
+		"fonts" : [
+
+			"roboto.thin"
+
+			, "roboto.bold"
+
+			, "roboto.black"
+
+			, "roboto.condensed.regular"
+
+		]
+
+	}
+
+	, "head" : {
+
+		"title" : "GGN Sense Manager"
+
+		, "shortcut" : "{%HTTP_HOST%}ggn.sense/app.icon.png"
+
+		, "meta" : [
+
+			["charset", "utf-8"]
+
+			, ["http-equiv", "pragma", "cache"]
+
+		]
+
+	}
+
+	, "floatingMenu" : {
+
+		"shape" : "circle"
+
+		, "size" : "x64"
+
+		, "icon-size" : "x32"
+
+		, "items" : {
+
+			"add" : {
+
+				"icon" : "add"
+
+				, "title" : "Ajouter"
+
+				, "action" : "function(e){GSense.Windoo.Show('./junctions/add', 'Créer une nouvelle jonction');}"
+
+			}
+
+			, "list" : {
+
+				"icon" : "list"
+
+				, "action" : "function(e){GSense.Windoo.Show('./junctions/created', 'Toutes les jonctions créées');}"
+
+			}
+
+
+		}
+
+	}
+
+	, "menu" : {
+
+		"items" : [
+
+			{
+
+				"label" : "<span class=\"gui iconx text-x24 margin-r-x4\">home</span><span class=\"disable mi-enable-inline li-enable-inline s-enable-inline\">Accueil</span>"
+							
+				, "link" : "index"
+				
+				, "title" : "Allez à l'accueil"
+
+				, "class" : "gui flex center"
+
+			}
+
+			, {
+
+				"label" : "<span class=\"gui iconx text-x20 margin-r-x4\">view_quilt</span>Structure"
+							
+				, "link" : "junctions/layout"
+				
+				, "title" : "Structure"
+
+				, "class" : "gui flex center"
+
+			}
+			
+			, {
+
+				"label" : "<span class=\"gui iconx text-x20 margin-r-x4\">color_lens</span>Thèmes"
+							
+				, "link" : "junctions/theme"
+				
+				, "title" : "Thèmes"
+
+				, "class" : "gui flex center"
+
+			}
+
+			, {
+
+				"label" : "<span class=\"gui iconx text-x20 margin-r-x4\">settings</span>Paramètres"
+							
+				, "link" : "junctions/settings"
+				
+				, "title" : "Paramètres"
+
+				, "class" : "gui flex center"
+
+			}
+
+			, {
+
+				"label" : "<span class=\"gui iconx text-x20 margin-r-x4\">remove_red_eye</span>Pré-Visualiser"
+							
+				, "link" : "junctions/overview"
+				
+				, "title" : "Tester votre page"
+
+				, "class" : "gui flex center "
+
+			}
+
+		]
+
+	}
+
+
+
+
+}

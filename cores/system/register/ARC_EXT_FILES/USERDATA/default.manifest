@@ -1,0 +1,29 @@
+﻿;REGISTRE Gougnon
+;By GOBOU Y. Yannick
+
+[INFO]
+NAME = Gougnon Users Data
+AUTHOR = GOBOU Yohou Yannick - Gougnon.com
+AUTHOR_WEBSITE = Gougnon.com
+AUTHOR_EMAIL = qaidyann@Gougnon.com
+
+
+[CONFIG]
+;Entete
+HEADER = content-type:text/html
+
+;Securité
+CONTROL-ACCESS = deny from all
+CONTROL-ACCESS-EXCLUDES = domaine
+OPENED_RIGHT = 1
+
+;Dossiers
+ROOT_SRC = *
+RENDERING_ENGINE = g.default
+EXT = *
+
+
+;Auto-gestion
+[ON]
+ERROR = error.paun?{%ERROR_CODE%}
+

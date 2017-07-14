@@ -1,0 +1,255 @@
+<?php
+/*
+	Copyright GOBOU Y. Yannick
+======================================================
+	CLASS Gougnon
+	PAGE cores/_GGNs/PHP/ggn.core.applications/.class.php
+======================================================
+
+*/
+
+global $_Gougnon,$GRegister;
+
+/* Verification */
+if(!class_exists('_GGN')){exit('Class Native introuvable');}
+if(!class_exists('Gougnon')){_GGN::wCnsl('Class Gougnon introuvable');}
+
+
+
+$GAPPS_NATIVE_VARS = 'USERS_SESSION_MANAGER_PLUGIN_PLG LOGIN_PAGE USERS_SESSION_LOCATION USERS_SESSION_MANAGER_PLUGIN_NAME SYSTEM_THEME';
+
+_GGN::keyExists(explode(' ',$GAPPS_NATIVE_VARS));
+
+
+	
+
+
+
+if(!class_exists(_GGN::varn('USERS_SESSION_MANAGER_PLUGIN_NAME'))){
+	Gougnon::loadPlugins(_GGN::varn('USERS_SESSION_MANAGER_PLUGIN_PLG'));
+}
+	
+
+
+
+
+
+
+
+/* Class GUSERS */
+if(!class_exists('GUSERS')){
+	_GGN::PHPCore('ggn.core.users');
+}
+
+
+
+
+/* Class CSS3 //removed */
+// if(!class_exists('CSS3')){
+// 	Gougnon::loadPlugins('PHP/CSS.3');
+// }
+
+
+
+if(!class_exists('GAPPS')){
+
+
+
+	define('APPMockUpFullScreen', '--fullscreen.fid:' . _GGNCrypt::RKCRandm(_GGNCrypt::PALETTE_NUMERIC, 3));
+	define('APPMockUpNormal', '--normal.nid:' . _GGNCrypt::RKCRandm(_GGNCrypt::PALETTE_NUMERIC, 3));
+
+
+		
+	class GAPPS extends GGNCorePHP implements GGNCoreInterface
+	{
+
+		/* INFOS */
+		CONST NAME = 'Gougnon Applications Core';
+		CONST VERSION = '0.1';
+		CONST REEL_VERSION = '0.1.150427.1657';
+		
+		
+		
+		
+		
+		
+		
+		
+		/* RESSOURCES */
+		CONST CPREF = 'function';
+		CONST FUNCTIONS_STORE = 'functions/';
+		CONST CSUF = 'PHPCore.php';
+
+		
+
+		CONST TBL_ = 'NATIVE_APPS';
+
+		CONST CRYKLEN = 256;
+		CONST PWCRYDT = 3;
+		CONST PWCRYKEY = 3;
+
+
+
+
+		CONST MANIFEST = '.manifest.php';
+
+
+
+
+
+		CONST MockUpLayoutLeft = 'ggn-app-mockup-side-left';
+		CONST MockUpLayoutInside = 'ggn-app-mockup-inside';
+		CONST MockUpLayoutRight = 'ggn-app-mockup-side-right';
+
+
+
+		
+		
+		var $Manifest = [];
+		var $ImageQuality = '-medium';
+		var $MainManifest = [];
+		var $Registrer = false;
+		var $Settings = false;
+		var $Arguments = false;
+		var $appCodeNameConcatenate = false;
+
+		var $innerAPP = false;
+
+
+
+
+		/* Communication */
+		var $COM = [];
+		var $AppInstance = '0';
+		// var $AppInternalExec = '0';
+		
+		
+
+
+		/* Authentification */
+		var $REQUIRE_APP_AUTH=true;
+		var $REQUIRE_AUTH=true;
+
+
+
+		
+		/* CONSTRUCTEUR */
+		public function __construct(){
+			global $GLANG;
+			
+			$this->Arguments = func_get_args();
+			// $this->LANG = $GLANG;
+			$this->ajaxRun = (isset($_SERVER['HTTP_X_REQUESTED_WIDTH'])) ? $_SERVER['HTTP_X_REQUESTED_WIDTH'] : FALSE;
+
+			if(isset($this->Arguments[0]) && is_string($this->Arguments[0])){
+
+			
+				$this->Location = (isset($this->Arguments[0])) ? $this->Arguments[0]: false;
+				$this->Location = (substr(ltrim(rtrim($this->Location)), -1)=='/')?$this->Location: $this->Location . '/';
+				
+
+				$this->appCodeNameConcatenate = explode('://', $this->Location);
+
+				if(isset($this->appCodeNameConcatenate[1])){
+
+					if(isset($this->Arguments[2])){
+						if(is_array($this->Arguments[2])){
+							foreach ($this->Arguments[2] as $key => $value) {
+								$this->{$key}=$value;
+							}
+						}
+					}
+
+					$this->Register = (isset($this->Arguments[1])) ? $this->Arguments[1]: false;
+					
+					if(is_object($this->Register)){
+						$this->AppInstance = $this->Register->_REQUEST('gapp-instance');
+					}
+
+					$this->Core = new _GGNCustomObject();
+
+					$this->InitializeParams();
+
+					$this->_cssFiles = [];
+
+					$this->_jsFiles = [];
+
+					$this->Params->MockUpLayoutMode = APPMockUpNormal;
+
+					$this->InitializeMain();
+				}
+
+				else{
+
+					$this->arguments = $this->Arguments; 
+					$this->key = (isset($this->arguments[0]))?(($this->arguments[0]!=false)?$this->arguments[0]:false):false;
+					$this->mode = (isset($this->arguments[1]))?(($this->arguments[1]!=false)?strtolower($this->arguments[1]):false):false;
+
+					$this->sessionHandlerClass = _GGN::varn('USERS_SESSION_MANAGER_PLUGIN_NAME');
+					$this->sessionHandler = new $this->sessionHandlerClass;
+
+				}
+
+				
+			}
+
+		}
+			
+		
+		
+		/* FUNCTIONS */
+		public static function getCoreDir(){
+			return dirname(__FILE__) . '/';	
+		}
+		
+
+
+		
+		public static function functionsDir($function, $mode){
+			return self::getCoreDir() . '/' . self::FUNCTIONS_STORE . $mode . '/' . self::CPREF . '.' . $function . '.' . self::CSUF;
+		}
+
+
+		
+		public static function isFunction($function, $mode){
+			$f = self::functionsDir($function, $mode);
+			return (is_file($f)?$f:false);
+		}
+
+
+		
+		public static function loadFunction($function, $args, $mode, $context){
+			global $Gougnon, $GLANG;
+
+			$is = self::isFunction($function, $mode);
+			$return = null;
+
+			if(is_string($is)){include $is; }
+			else{_GGN::wCnsl("<h1>" . self::NAME . "</h1> la méthode <b>" . ($function) . "</b> n'existe pas en mode <b>" . $mode . "</b> "); }
+
+			return $return;
+		}
+			
+			
+			
+		public static function __callStatic($function,$args){
+			return self::loadFunction($function, $args, '~statics', false);
+		}
+			
+			
+			
+		public function __call($function,$args){
+			return $this->loadFunction($function, $args, '~dynamics', $this);
+		}
+			
+
+
+		
+	}
+		
+		
+	 
+}
+ 
+ 
+?>

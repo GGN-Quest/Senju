@@ -1,0 +1,12 @@
+[INFO]
+NAME = GGN Sense ARC
+AUTHOR = Yannick GOBOU
+AUTHOR_WEBSITE = gougnon.com
+AUTHOR_EMAIL = yann@gougnon.com
+[CONFIG]
+HEADER = content-type:text/html
+CONTROL-ACCESS = allow from all
+CONTROL-ACCESS-EXCLUDES = 
+OPENED_RIGHT = 3
+ACCESS_OR_RIGHT = 0
+RENDERING_ENGINE = default

@@ -1,0 +1,23 @@
+;Gougnon Gougnon Core Register 0.0.2, 161208.0824
+
+[INFO]
+NAME = 
+AUTHOR = 
+AUTHOR_WEBSITE = 
+AUTHOR_EMAIL = 
+
+[CONFIG]
+;Entete
+HEADER = content-type:text/html
+
+;Securité
+CONTROL-ACCESS = allow from all
+CONTROL-ACCESS-EXCLUDES = 
+OPENED_RIGHT = 0
+ACCESS_OR_RIGHT = 0
+
+;Dossiers et moteur de rendu
+ROOT_SRC = *
+RENDERING_ENGINE = default
+ENGINE_TYPE = inc/file
+EXT = *

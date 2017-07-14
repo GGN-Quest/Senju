@@ -1,0 +1,29 @@
+;Gougnon Register 0.0.2
+;By GOBOU Y. Yannick
+
+[INFO]
+NAME = JS Render 1.0
+AUTHOR = GOBOU Yohou Yannick - Gougnon.com
+AUTHOR_WEBSITE = Gougnon.com
+AUTHOR_EMAIL = qaidyann@Gougnon.com
+
+
+[CONFIG]
+;Entete
+HEADER = content-type:image/svg+xml
+
+;Securité 
+CONTROL-ACCESS = allow from all
+CONTROL-ACCESS-EXCLUDES = 
+OPENED_RIGHT = 0
+
+;Dossiers
+ROOT_SRC = {%SVG%}
+RENDERING_ENGINE = default
+EXT = .svg.php
+
+
+;Auto-gestion
+[ON]
+ERROR = error.paun?{%ERROR_CODE%}
+

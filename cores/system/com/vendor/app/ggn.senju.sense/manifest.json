@@ -1,0 +1,29 @@
+{
+	
+	"Key" : "ggn.senju.sense"
+
+	, "Name" : "GGN Sense Senju"
+
+	, "Description" : "Gestionnaire des pages"
+
+	, "About" : "Copyright 2016 GOBOU Y. Yannick"
+
+	, "Category" : "ggn.system.manager.page"
+
+	, "Path" : "ggn-system://ggn.sense"
+
+	, "URL" : "{%HTTP_HOST%}ggn.sense/"
+
+	, "Res" : "{%HTTP_HOST%}ggn.sense/"
+
+	, "Icon" : "{%HTTP_HOST%}ggn.sense/app.icon.png"
+
+	, "Cover" : "{%HTTP_HOST%}ggn.sense/app.cover.jpg"
+
+	, "Available" : true
+
+	, "Permission" : 3
+
+	, "LiveMode" : true
+
+}

@@ -1,0 +1,49 @@
+{
+	
+	"sheet" : [
+
+		{
+
+			"name":"Columns"
+
+			,"class":"ui-columns gui flex row wrap"
+
+			,"node":[
+
+				{
+
+					"name":"Left"
+
+					,"class":"ui-column-left gui ss-flex-order-2 x192-w ss-col-16"
+
+					,"node":[]
+
+				}
+
+				, {
+
+					"name":"Center"
+
+					,"class":"ui-column-center gui ss-flex-order-1 col-0 ss-col-16"
+
+					,"node":[]
+
+				}
+
+				, {
+
+					"name":"Right"
+
+					,"class":"ui-column-right gui ss-flex-order-3 x256-w ss-col-16"
+
+					,"node":[]
+
+				}
+
+			]
+
+		}
+
+	]
+
+}

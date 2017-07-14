@@ -1,0 +1,5 @@
+<?php
+	
+	$dirname .= '.photo.profile/';
+
+?>

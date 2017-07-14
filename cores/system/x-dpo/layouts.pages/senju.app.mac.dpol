@@ -1,0 +1,147 @@
+{
+	
+	"axe" : "y"
+	
+	,"sheet" : [
+
+		{
+
+			"name" : "OnlyBar"
+
+			,"class" : "ui-header-onlybar gui pos-fixed"
+
+			,"node":[
+
+				{
+
+					"name" : "Logo"
+
+					, "class" : "ui-header-logo gui flex center _h10"
+
+					, "node" : [
+
+						{
+
+							"name" : "Icon"
+
+							, "tagname" : "img"
+
+							, "class" : "ui-header-logo-icon"
+
+						}
+
+						, {
+
+							"name" : "Label"
+
+							, "class" : "ui-header-logo-label"
+
+						}
+
+					]
+
+				}
+
+			]
+
+		}
+
+		, {
+
+			"name":"NavBar"
+
+			,"class":"ui-navbar row gui pos-fixed"
+
+			,"node":[
+
+				{
+
+					"name" : "Loader"
+
+					, "class" : "ui-navbar-loader"
+
+					, "node" : [
+
+						{
+
+							"name" : "Track"
+
+							,"class" : "navbar-loader-track gui-fx"
+
+						}
+
+					]
+				}
+
+				, {
+
+					"name" : "Content"
+
+					, "class" : "ui-navbar-content"
+
+					, "node" : [
+
+						{
+
+							"name" : "ScopeButton"
+
+							, "class" : "ui-navbar-scope-button gui flex center"
+
+							, "tagname" : "a"
+
+							, "href" : ""
+
+							, "onclick" : "return false;"
+
+							, "handler-click" : "Ui-NavBar-ScopeButton"
+
+							, "node" : []
+
+						}
+
+						, {
+
+							"name" : "Menu"
+
+							, "class" : "ui-navbar-menu"
+
+						}
+
+						, {
+
+							"name" : "Module"
+
+							, "class" : "ui-navbar-module"
+
+						}
+
+						, {
+
+							"name" : "Option"
+
+							, "class" : "ui-navbar-option"
+
+						}
+
+					]
+
+				}
+
+
+			]
+
+		}
+
+		, {
+
+			"name":"Container"
+
+			,"class":"ui-container"
+
+			,"node":[]
+
+		}
+
+	]
+
+}

@@ -1,0 +1,6 @@
+<?php
+	
+	header('content-type:image/jpg');
+	include $this->PATH . self::ARC_EXT_RENDERING . '.JPG/imagesJPG' . self::ARC_EXT_RENDERING_EXT;
+
+?>

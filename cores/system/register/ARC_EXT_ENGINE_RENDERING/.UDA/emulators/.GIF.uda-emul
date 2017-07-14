@@ -1,0 +1,6 @@
+<?php
+	
+	header('content-type:image/gif');
+	include $this->PATH . self::ARC_EXT_RENDERING . '.GIF/imagesGIF' . self::ARC_EXT_RENDERING_EXT;
+
+?>

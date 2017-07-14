@@ -1,0 +1,183 @@
+{
+	
+	"axe" : "y"
+	
+	,"sheet" : [
+
+		{
+
+			"name" : "OnlyBar"
+
+			,"class" : "ui-header-onlybar gui flex row pos-fixed"
+
+			,"node":[
+
+				{
+
+					"name" : "Logo"
+
+					, "class" : "ui-header-logo col-2 x80-w-min gui flex center "
+
+					, "node" : [
+
+						{
+
+							"name" : "Icon"
+
+							, "tagname" : "img"
+
+							, "class" : "ui-header-logo-icon"
+
+						}
+
+						, {
+
+							"name" : "Label"
+
+							, "class" : "ui-header-logo-label"
+
+						}
+
+					]
+
+				}
+
+				,{
+
+					"name" : "Modules"
+
+					, "class" : "ui-header-modules col-0 gui flex row center pos-rel disable-scrollbar"
+
+					, "node" : [
+
+						{
+
+							"name" : "ProgressBar"
+
+							, "class" : "ui-header-modules-progress-bar pos-abs gui flex center"
+
+						}
+
+						, {
+
+							"name" : "Content"
+
+							, "class" : "ui-header-modules-container ui-header-module-0 pos-abs gui flex row center disable-y-scrollbar enable-x-auto-scrollbar "
+
+						}
+
+					]
+
+				}
+
+				,{
+
+					"name" : "Tools"
+
+					, "class" : "ui-header-tools col-2 x80-w-min gui flex center disable-y-scrollbar enable-x-auto-scrollbar"
+
+				}
+
+			]
+
+		}
+
+		, {
+
+			"name":"NavBar"
+
+			,"class":"ui-navbar row gui pos-fixed"
+
+			,"node":[
+
+				{
+
+					"name" : "Loader"
+
+					, "class" : "ui-navbar-loader"
+
+					, "node" : [
+
+						{
+
+							"name" : "Track"
+
+							,"class" : "navbar-loader-track gui-fx"
+
+						}
+
+					]
+				}
+
+				, {
+
+					"name" : "Content"
+
+					, "class" : "ui-navbar-content"
+
+					, "node" : [
+
+						{
+
+							"name" : "ScopeButton"
+
+							, "class" : "ui-navbar-scope-button gui flex center"
+
+							, "tagname" : "a"
+
+							, "href" : ""
+
+							, "onclick" : "return false;"
+
+							, "handler-click" : "Ui-NavBar-ScopeButton"
+
+							, "node" : []
+
+						}
+
+						, {
+
+							"name" : "Menu"
+
+							, "class" : "ui-navbar-menu"
+
+						}
+
+						, {
+
+							"name" : "Module"
+
+							, "class" : "ui-navbar-module"
+
+						}
+
+						, {
+
+							"name" : "Option"
+
+							, "class" : "ui-navbar-option"
+
+						}
+
+					]
+
+				}
+
+
+			]
+
+		}
+
+		, {
+
+			"name":"Container"
+
+			,"class":"ui-container"
+
+			,"node":[]
+
+		}
+
+	]
+
+}

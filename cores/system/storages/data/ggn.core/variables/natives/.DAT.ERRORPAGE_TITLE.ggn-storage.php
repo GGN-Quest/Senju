@@ -1,0 +1,1 @@
+{"header":{"name":"Gougnon Core Storages","version":"0.1","versionUpdate":"0.1.150218.1549"},"option":{"row":2,"column":["VALUE","COMMENT","TIME","AVAILABLE"]},"data":[["GGN Senju","Titre page erreur",1498935641,1],["GGN Senju","Titre page erreur",1498935641,1]],"footer":{"time":1499108258}}

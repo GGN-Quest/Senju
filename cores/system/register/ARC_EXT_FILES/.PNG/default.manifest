@@ -1,0 +1,29 @@
+;Gougnon Register 0.0.2
+;By GOBOU Y. Yannick
+
+[INFO]
+NAME = Images PNG Reader
+AUTHOR = GOBOU Yohou Yannick - Gougnon.com
+AUTHOR_WEBSITE = Gougnon.com
+AUTHOR_EMAIL = qaidyann@Gougnon.com
+
+
+[CONFIG]
+;Entete
+HEADER = content-type:image/PNG
+; HEADER = content-type:text/html
+
+;Securité
+SECURE = 0
+OPENED_RIGHT = 0
+
+;Dossiers
+ROOT_SRC = {%IMAGES%}
+RENDERING_ENGINE = imagesPNG
+EXT = .png
+
+
+;Auto-gestion
+[ON]
+ERROR = error.paun?{%ERROR_CODE%}
+

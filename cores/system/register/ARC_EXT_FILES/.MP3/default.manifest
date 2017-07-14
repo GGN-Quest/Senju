@@ -1,0 +1,31 @@
+;REGISTRE MP3
+;By GOBOU Y. Yannick
+
+[INFO]
+NAME = PHP/HTML Render
+AUTHOR = GOBOU Yohou Yannick - Gougnon.com
+AUTHOR_WEBSITE = Gougnon.com
+AUTHOR_EMAIL = qaidyann@Gougnon.com
+
+
+[CONFIG]
+
+;Entete
+HEADER = content-type:audio/mpeg
+
+;Securité
+CONTROL-ACCESS = deny from all
+CONTROL-ACCESS-EXCLUDES = domaine
+
+OPENED_RIGHT = 0
+
+;Dossiers
+ROOT_SRC = {%SOUNDS_FILE%}mp3/
+RENDERING_ENGINE = default
+EXT = .mp3
+
+
+;Auto-gestion
+[ON]
+ERROR = error.paun?{%ERROR_CODE%}
+

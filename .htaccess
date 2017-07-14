@@ -1,0 +1,18 @@
+
+<Files ~ "\.(ini|meta|manifest|join|joins)$"> 
+	deny from all
+</Files>
+ 
+
+Options +FollowSymlinks
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www.stylivoir.com$
+RewriteRule ^(.*) http://stylivoir.com/$1 [QSA,L,R=301]
+ 
+ 
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule (.*) ./runtime.php?___auto_open_file___=$1 [QSA,L]
+</IfModule>

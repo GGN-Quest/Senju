@@ -1,0 +1,28 @@
+;Gougnon Register 0.0.2
+;By GOBOU Y. Yannick
+
+[INFO]
+NAME = Font Reader
+AUTHOR = GOBOU Yohou Yannick - Gougnon.com
+AUTHOR_WEBSITE = Gougnon.com
+AUTHOR_EMAIL = qaidyann@Gougnon.com
+
+
+[CONFIG]
+;Entete
+HEADER = 
+
+;Securité
+SECURE = 0
+OPENED_RIGHT = 0
+
+;Dossiers
+ROOT_SRC = {%FONTS%}
+RENDERING_ENGINE = fonts
+EXT = 
+
+
+;Auto-gestion
+[ON]
+ERROR = error.paun?{%ERROR_CODE%}
+

@@ -1,0 +1,29 @@
+;REGISTRE IHTML
+;By GOBOU Y. Yannick
+
+[INFO]
+NAME = PHP/HTML Render
+AUTHOR = GOBOU Yohou Yannick - Gougnon.com
+AUTHOR_WEBSITE = Gougnon.com
+AUTHOR_EMAIL = qaidyann@Gougnon.com
+
+
+[CONFIG]
+;Entete
+HEADER = content-type:text/html
+
+;Securité
+CONTROL-ACCESS = allow from all
+CONTROL-ACCESS-EXCLUDES = 
+OPENED_RIGHT = 0
+
+;Dossiers
+ROOT_SRC = {%APPLICATIONS%}
+RENDERING_ENGINE = default
+EXT = .app.php
+
+
+;Auto-gestion
+[ON]
+ERROR = error.paun?{%ERROR_CODE%}
+

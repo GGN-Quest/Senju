@@ -1,0 +1,1 @@
+{"header":{"name":"Gougnon Core Storages","version":"0.1","versionUpdate":"0.1.150218.1549"},"option":{"row":2,"column":["VALUE","COMMENT","TIME","AVAILABLE"]},"data":[["infos@gougnon.com","E-mail à contacter",1498935678,1],["infos@gougnon.com","E-mail à contacter",1498935678,1]],"footer":{"time":1499108292}}

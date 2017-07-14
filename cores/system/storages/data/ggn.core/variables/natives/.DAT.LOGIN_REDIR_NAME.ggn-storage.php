@@ -1,0 +1,1 @@
+{"header":{"name":"Gougnon Core Storages","version":"0.1","versionUpdate":"0.1.150218.1549"},"option":{"row":2,"column":["VALUE","COMMENT","TIME","AVAILABLE"]},"data":[["Interface","Nom de la page de redirection après connexion",1498935655,1],["Interface","Nom de la page de redirection après connexion",1498935655,1]],"footer":{"time":1499108272}}

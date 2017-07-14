@@ -1,0 +1,1 @@
+{"header":{"name":"Gougnon Core Storages","version":"0.1","versionUpdate":"0.1.150218.1549"},"option":{"row":2,"column":["VALUE","COMMENT","TIME","AVAILABLE"]},"data":[[3,"Nombre de post par page",1498935632,1],[3,"Nombre de post par page",1498935632,1]],"footer":{"time":1499108249}}

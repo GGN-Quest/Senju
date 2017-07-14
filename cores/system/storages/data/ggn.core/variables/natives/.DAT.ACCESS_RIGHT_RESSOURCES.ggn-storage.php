@@ -1,0 +1,1 @@
+{"header":{"name":"Gougnon Core Storages","version":"0.1","versionUpdate":"0.1.150218.1549"},"option":{"row":2,"column":["VALUE","COMMENT","TIME","AVAILABLE"]},"data":[[3,"Droit d\u0027accès au information du Système",1499037530,1],[3,"Droit d\u0027accès au information du Système",1499037530,1]],"footer":{"time":1499108237}}

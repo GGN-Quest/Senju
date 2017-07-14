@@ -1,0 +1,26 @@
+;Gougnon Register 0.0.2
+;By GOBOU Y. Yannick
+
+[INFO]
+NAME = JS Render 1.0
+AUTHOR = GOBOU Yohou Yannick - Gougnon.com
+AUTHOR_WEBSITE = Gougnon.com
+AUTHOR_EMAIL = qaidyann@Gougnon.com
+
+
+[CONFIG]
+;Entete
+HEADER = content-type:text/javascript
+
+;Securité 
+
+;Dossiers
+ROOT_SRC = {%JAVASCRIPTS%}
+RENDERING_ENGINE = JS.Render
+EXT = .js.php
+
+
+;Auto-gestion
+[ON]
+ERROR = error.paun?{%ERROR_CODE%}
+

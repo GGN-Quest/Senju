@@ -1,0 +1,1 @@
+{"header":{"name":"Gougnon Core Storages","version":"0.1","versionUpdate":"0.1.150218.1549"},"option":{"row":2,"column":["VALUE","COMMENT","TIME","AVAILABLE"]},"data":[["32","Nombre de Caratères maximum du nom de famille des utilisateurs",1498935698,1],["32","Nombre de Caratères maximum du nom de famille des utilisateurs",1498935698,1]],"footer":{"time":1499108310}}

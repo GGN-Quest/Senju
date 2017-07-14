@@ -1,0 +1,150 @@
+{
+	
+	"axe" : "y"
+	
+	,"sheet" : [
+
+		{
+
+			"name":"NavBar"
+
+			,"class":"ui-navbar row gui pos-fixed"
+
+			,"node":[
+
+				{
+
+					"name" : "Loader"
+
+					, "class" : "ui-navbar-loader"
+
+					, "node" : [
+
+						{
+
+							"name" : "Track"
+
+							,"class" : "navbar-loader-track"
+
+						}
+
+					]
+				}
+
+				, {
+
+					"name" : "Content"
+
+					, "class" : "ui-navbar-content"
+
+					, "node" : [
+
+						{
+
+							"name" : "Logo"
+
+							, "class" : "ui-navbar-logo gui flex center"
+
+							, "node" : [
+
+								{
+
+									"name" : "Icon"
+
+									, "tagname" : "img"
+
+									, "class" : "navbar-logo-icon"
+
+								}
+
+								, {
+
+									"name" : "Label"
+
+									, "class" : "navbar-logo-label"
+
+								}
+
+							]
+
+						}
+
+						, {
+
+							"name" : "Menu"
+
+							, "class" : "ui-navbar-menu"
+
+						}
+
+						, {
+
+							"name" : "Module"
+
+							, "class" : "ui-navbar-module"
+
+						}
+
+						, {
+
+							"name" : "Option"
+
+							, "class" : "ui-navbar-option"
+
+						}
+
+					]
+
+				}
+
+				, {
+
+					"name" : "Over"
+
+					, "class" : "ui-navbar-overlay gui-fx"
+
+					, "node" : [
+
+						{
+
+							"name" : "Logo"
+
+							, "class" : "ui-navbar-logo"
+
+							, "node" : [
+
+								{
+
+									"name" : "Icon"
+
+									, "tagname" : "img"
+
+									, "class" : "navbar-logo-icon"
+
+								}
+
+							]
+
+						}
+
+					]
+
+				}
+
+			]
+
+		}
+
+		, {
+
+			"name":"Container"
+
+			,"class":"ui-container"
+
+			,"node":[]
+
+		}
+
+	]
+
+}

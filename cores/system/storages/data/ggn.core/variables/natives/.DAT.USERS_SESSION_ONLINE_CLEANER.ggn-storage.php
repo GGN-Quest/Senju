@@ -1,0 +1,1 @@
+{"header":{"name":"Gougnon Core Storages","version":"0.1","versionUpdate":"0.1.150218.1549"},"option":{"row":2,"column":["VALUE","COMMENT","TIME","AVAILABLE"]},"data":[["-delete","Type de suppressions des sessions en ligne des utilisateurs",1498935692,1],["-delete","Type de suppressions des sessions en ligne des utilisateurs",1498935692,1]],"footer":{"time":1499108305}}
